@@ -28,3 +28,17 @@ function createOrderedRandomNumbers(numbers, n) {
         }
     }
 }
+
+function createSequentialNumbers(array,n){      
+    for(i=0; i<n; i++){
+        array.push(i+1);
+    }
+    show(array);
+}
+
+function createRandomNumbers(array,n){      
+    for(i=0; i<n; i++){
+        array.push(Math.floor(Math.random()*10)+1);
+    }
+    show(array);
+}
