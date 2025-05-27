@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        function runButtonPressed() {
+            var numbers = [];
+            createRandomNumbers(numbers, 10);
+            var result = [];
+            for (var i = numbers.length - 1; i >= 0; i--) {
+                result.push(numbers[i]);
+            }
+            show(result);
+        }
+
+
+        //すべての要素を逆順にする
+
+        //内容：配列を後ろから順に読み取り、新しい配列に格納する。
+
+        //ポイント：インデックス操作に慣れる。
+
+        //制約：reverse()メソッドは禁止
+    </script>
+</head>
+
+<body>
+    <h1>prac1-9</h1>
+    <button onclick="runButtonPressed()">run!</button>
+    <p id="res"></p>
+</body>
+
+</html>
