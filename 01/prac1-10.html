@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        function runButtonPressed() {
+            var numbers = [];
+            createRandomNumbers(numbers, 10);
+
+            var newnumbers = [];
+
+            newnumbers.push(numbers[numbers.length - 1]);
+
+
+            for (i = 0; i < numbers.length - 1; i++) {
+                newnumbers.push(numbers[i]);
+            }
+            show(newnumbers);
+
+        }
+
+        //配列の要素を右に1つずつずらす（末尾は先頭に）
+        //例：[1, 2, 3, 4] →[4, 1, 2, 3]
+        //ポイント：forでの順番を意識する。元配列は変更してもOK。
+    </script>
+</head>
+
+<body>
+    <h1>prac1-10</h1>
+    <button onclick="runButtonPressed()">run!</button>
+    <p id="res"></p>
+</body>
+
+</html>
