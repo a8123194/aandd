@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        function runButtonPressed() {
+            var numbers = [];
+            createRandomNumbers(numbers, 10);
+
+            var newnumbers = [];
+            for (i = 1; i <= numbers.length; i++) {
+                if (numbers[i - 1] < numbers[(i)]) {
+                    newnumbers.push(numbers[(i)]);
+                }
+            }
+            show(newnumbers);
+        }
+
+        //配列の要素のうち、前の値より大きいものだけを取り出す
+        //例：[1, 3, 2, 5, 4] →[3, 5]
+        //ポイント：i と i - 1 の比較を行う。
+    </script>
+</head>
+
+<body>
+    <h1>prac1-12</h1>
+    <button onclick="runButtonPressed()">run!</button>
+    <p id="res"></p>
+</body>
+
+</html>
