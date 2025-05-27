@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        function runButtonPressed() {
+            var numbers = [];
+            createRandomNumbers(numbers, 10);
+
+            var newnumbers = [];
+            for (i = 0; i < numbers.length; i++) {
+                if (numbers[i] % 2 == 0) {
+                    newnumbers.push(numbers[i] * 2);
+                }
+            }
+            show(newnumbers);
+        }
+
+        //配列の偶数の値だけを2倍にして、新しい配列に入れる
+        //元配列は変更しない。偶数だけに操作を行う。
+        //例：[1, 4, 3, 6] →[8, 12]
+    </script>
+</head>
+
+<body>
+    <h1>prac1-11</h1>
+    <button onclick="runButtonPressed()">run!</button>
+    <p id="res"></p>
+</body>
+
+</html>
