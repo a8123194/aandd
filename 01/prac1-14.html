@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        function runButtonPressed() {
+            var array = [1, 2, 3, 4, 5];
+            var x = shiftLeft(array, 1);
+            show(array);
+
+            show(x);
+        }
+        function shiftLeft(array, n) {
+
+            var newarray = [];
+            for (i = n % array.length; i < array.length; i++) {
+                newarray.push(array[i]);
+            }
+            for (i = 0; i < n % array.length; i++) {
+                newarray.push(array[i]);
+            }
+
+            return newarray;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>prac1-14</h1>
+    <button onclick="runButtonPressed()">run!</button>
+    <p id="res"></p>
+</body>
+
+</html>
