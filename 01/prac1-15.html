@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        function runButtonPressed() {
+            var array = [1, 2, 3, 4, 5];
+            show(array);
+
+            var x = insertAt(array, 2, 100)
+            show(x);
+        }
+
+        //function insertAt(array, index, value) {
+
+
+        var newarray = [];
+        function insertAt(array, index, value) {
+            for (let i = array.length; i > index; i--) {
+                array[i] = array[i - 1]; // 要素を後ろにずらす
+            }
+            array[index] = value;
+            return array;
+        }
+
+
+
+        // for (var i = 0; i < index; i++) {
+        //     newarray.push(array[i]);
+        // }
+        // newarray.push(value);
+
+        // for (var j = index + 1; j <= array.length; j++) {
+
+        //     newarray.push(array[j - 1]);
+        // }
+
+
+
+        //array.push(array[index] = value);
+        //console.log(array);
+
+        // return array;
+        // }
+
+    </script>
+</head>
+
+<body>
+    <h1>prac1-15</h1>
+    <button onclick="runButtonPressed()">run!</button>
+    <p id="res"></p>
+</body>
+
+</html>
