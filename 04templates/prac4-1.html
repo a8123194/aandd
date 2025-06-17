@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        var array = [];
+        var n = 10;
+        function runButtonPressed() {
+            createRandomNumbers(array, 10);
+
+        }
+        function createRandomNumbers(array, n) {
+            for (i = 0; i < n; i++) {
+                array.push(Math.floor(Math.random() * 10) + 1);
+            }
+            show(array);
+        }
+
+        function searchButtonPressed() {
+            var x = document.getElementById("tf1").value;
+            for (i = 0; i < n; i++) {
+                if (array[i] == x) {
+                    document.getElementById('res2').innerHTML = x + 'は' + i + '番目'
+                    break;
+                } else {
+                    document.getElementById('res2').innerHTML = 'ありませんでした'
+                }
+            }
+        }
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <h1>prac4-1</h1>
+    <button onclick="runButtonPressed()">run</button>
+    <p id="res"></p>
+    <input id="tf1" type="text"><button onclick="searchButtonPressed()">search</button>
+    <P ID="res2"></P>
+</body>
