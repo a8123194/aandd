@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        function runButtonPressed() {
+            var array = [1, 2, 3];
+
+            show(array);
+
+
+            var x = removeall(array, 2);
+
+            show(x);
+
+        }
+
+
+        function removeall(array, value) {
+            var newarray = [];
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] == value) {
+                } else {
+                    newarray.push(array[i]);
+                }
+            }
+            return newarray;
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1>prac1-16</h1>
+    <button onclick="runButtonPressed()">run!</button>
+    <p id="res"></p>
+</body>
+
+</html>
